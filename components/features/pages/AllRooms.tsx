@@ -156,7 +156,7 @@ const AllRooms = () => {
                     className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#F5F5F5]/70"
                   >
                     <Image
-                      src={facilityIcons[item]}
+                      src={facilityIcons[item as keyof typeof facilityIcons]}
                       alt={item}
                       title="View Icon Details"
                     />
