@@ -150,19 +150,19 @@ const AllRooms = () => {
                 <span>{room.hotel.address}</span>
               </div>
               <div className="flex flex-wrap items-center mt-3 mb-6 gap-4">
-                {room.amenities.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#F5F5F5]/70"
-                  >
-                    <Image
-                      src={facilityIcons[item]}
-                      alt={item}
-                      title="View Icon Details"
-                    />
-                    <p className="text-xs">{item}</p>
-                  </div>
-                ))}
+                {room.amenities.map((item: string, index: number) => {
+                  const icon =
+                    facilityIcons[item as keyof typeof facilityIcons];
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#F5F5F5]/70"
+                    >
+                      <Image src={icon} alt={item} title="View Icon Details" />
+                      <p className="text-xs">{item}</p>
+                    </div>
+                  );
+                })}
               </div>
               <p className="text-xl font-medium text-gray-700">
                 ${room.pricePerNight} /night

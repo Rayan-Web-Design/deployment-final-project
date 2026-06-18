@@ -1,3 +1,5 @@
+type StaticImageData = import("next/image").StaticImageData;
+
 /**
  * Room interface
  */
@@ -11,7 +13,7 @@ declare interface RoomI {
   };
   maxPeople: number;
   amenities: string[];
-  images: string[];
+  images: (string | StaticImageData)[];
   isAvailable: boolean;
   hotel?: {
     name: string;

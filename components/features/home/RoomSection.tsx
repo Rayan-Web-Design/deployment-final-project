@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { assets } from "@/assets/assets";
 import Link from "next/link";
 
 interface RoomSectionProps {
   room: {
     _id: string;
-    images: string[];
+    images: (string | StaticImageData)[];
     hotel: {
       name: string;
       address: string;
