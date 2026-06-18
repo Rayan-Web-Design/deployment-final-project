@@ -1,4 +1,4 @@
-import type { StaticImageData } from "next/image";
+type StaticImageData = import("next/image").StaticImageData;
 
 /**
  * Room interface
