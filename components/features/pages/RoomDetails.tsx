@@ -82,7 +82,7 @@ const RoomDetails = () => {
                     rounded-lg bg-gray-100"
               >
                 <Image
-                  src={facilityIcons[item]}
+                  src={facilityIcons[item as keyof typeof facilityIcons]}
                   alt={item}
                   className="w-5 h-5"
                 />
